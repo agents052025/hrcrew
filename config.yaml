@@ -1,0 +1,32 @@
+llm:
+  agent_specific:
+    document_processor:
+      max_tokens: 1000
+      model_name: gpt-3.5-turbo
+      provider: openai
+      temperature: 0.3
+    matcher:
+      max_tokens: 1000
+      model_name: gpt-3.5-turbo
+      provider: openai
+      temperature: 0.3
+    report_generator:
+      max_tokens: 1000
+      model_name: gpt-3.5-turbo
+      provider: openai
+      temperature: 0.3
+    researcher:
+      max_tokens: 1500
+      model_name: gpt-3.5-turbo
+      provider: openai
+      temperature: 0.3
+  ollama:
+    max_tokens: 1000
+    model_name: mistral
+    server_url: http://localhost:11434
+    temperature: 0.7
+  openai:
+    max_tokens: 2000
+    model_name: gpt-3.5-turbo
+    temperature: 0.7
+  provider: openai

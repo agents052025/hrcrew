@@ -1,0 +1,92 @@
+JOHN SMITH
+Software Engineer
+
+john.smith@example.com
+(555) 123-4567
+https://linkedin.com/in/johnsmith
+https://github.com/johnsmith
+
+-------------------------------
+SUMMARY
+-------------------------------
+Experienced software engineer with 7+ years specializing in machine learning and cloud architecture. Proven track record of designing and implementing scalable solutions. Passionate about AI/ML technologies and their practical applications in solving business problems.
+
+-------------------------------
+SKILLS
+-------------------------------
+Programming: Python, JavaScript, Java, SQL, C++
+Frameworks/Tools: TensorFlow, PyTorch, React, Django, Flask, Node.js, Docker, Kubernetes
+Cloud: AWS (EC2, S3, Lambda), Google Cloud Platform, Azure
+Data & ML: Pandas, NumPy, Scikit-learn, Data Analysis, Model Deployment
+Development: Git, CI/CD, Agile/Scrum, Test-Driven Development
+Soft Skills: Problem Solving, Technical Leadership, Communication, Teamwork
+
+-------------------------------
+WORK EXPERIENCE
+-------------------------------
+Senior Machine Learning Engineer
+TechInnovate Inc. | January 2020 - Present
+- Led the design and implementation of recommendation systems that increased user engagement by 35%
+- Architected and deployed ML pipeline infrastructure using Kubernetes, reducing model deployment time by 60%
+- Managed a team of 4 engineers, mentoring junior developers and establishing best practices
+- Collaborated with product teams to translate business requirements into technical specifications
+- Implemented A/B testing framework for model evaluation, resulting in more reliable deployments
+
+Software Engineer
+DataSolutions Corp. | March 2017 - December 2019
+- Developed data processing pipelines handling 5TB+ of daily user interaction data
+- Created REST APIs using Django and Flask for internal data services
+- Optimized PostgreSQL database queries, improving application performance by 40%
+- Implemented CI/CD pipelines using Jenkins and Docker for automated testing and deployment
+- Participated in code reviews and maintained high code quality standards
+
+Junior Developer
+WebTech Startup | June 2015 - February 2017
+- Built responsive web applications using React and Node.js
+- Implemented features for social media integration and user authentication
+- Worked with MongoDB for data storage and retrieval
+- Fixed bugs and addressed technical debt in legacy codebase
+- Participated in Agile development processes, daily standups and sprint planning
+
+-------------------------------
+EDUCATION
+-------------------------------
+Master of Science in Computer Science
+University of Technology | 2013 - 2015
+- Specialization: Machine Learning and Artificial Intelligence
+- Thesis: "Neural Network Approaches to Natural Language Understanding"
+- GPA: 3.8/4.0
+
+Bachelor of Science in Computer Engineering
+State University | 2009 - 2013
+- Minor: Mathematics
+- Relevant coursework: Data Structures, Algorithms, Database Systems, Operating Systems
+- GPA: 3.6/4.0
+
+-------------------------------
+PROJECTS
+-------------------------------
+Predictive Maintenance System (2021)
+- Designed and implemented a machine learning system that predicts equipment failures
+- Used sensor data and historical maintenance records to achieve 92% prediction accuracy
+- Technologies: Python, TensorFlow, AWS, Docker
+
+Open Source ML Framework Contributions (2019-Present)
+- Active contributor to open-source machine learning libraries
+- Implemented performance optimizations and new features
+- Fixed bugs and improved documentation
+
+-------------------------------
+CERTIFICATIONS
+-------------------------------
+- AWS Certified Solutions Architect (2022)
+- Google Professional Data Engineer (2021)
+- TensorFlow Developer Certificate (2020)
+- Scrum Master Certification (2019)
+
+-------------------------------
+LANGUAGES
+-------------------------------
+- English (Native)
+- Spanish (Intermediate)
+- French (Basic) 

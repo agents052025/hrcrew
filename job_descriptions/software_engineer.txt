@@ -1,0 +1,54 @@
+Senior Software Engineer - Full Stack
+
+Company: TechSolutions Inc.
+Location: Remote (with occasional travel to New York HQ)
+Type: Full-time
+
+About Us:
+TechSolutions Inc. is a fast-growing technology company specializing in enterprise SaaS solutions. We build scalable, user-friendly applications that help businesses streamline their operations and improve productivity. Our flagship product serves over 5,000 companies worldwide.
+
+Job Description:
+We are seeking an experienced Senior Software Engineer to join our engineering team. The ideal candidate will design, develop, and maintain high-quality software for our enterprise applications. You will work closely with product managers, designers, and other engineers to build robust features and services.
+
+Responsibilities:
+- Design, develop, and maintain scalable and efficient code for our web applications
+- Contribute to full-stack development including frontend, backend, and database design
+- Collaborate with cross-functional teams to define, design, and ship new features
+- Participate in code reviews and mentor junior developers
+- Implement automated testing strategies and improve code quality
+- Troubleshoot and resolve complex technical issues in production environments
+- Work with DevOps to improve CI/CD pipelines and infrastructure
+- Contribute to technical documentation and architectural decisions
+- Stay updated with latest industry trends and technologies
+
+Requirements:
+- Bachelor's degree in Computer Science, Engineering, or related field
+- 5+ years of professional software development experience
+- Strong proficiency in JavaScript/TypeScript and at least one backend language (Python, Java, Go)
+- Experience with modern web frameworks (React, Angular, or Vue.js)
+- Knowledge of database systems (SQL and NoSQL)
+- Familiarity with cloud platforms (AWS, GCP, or Azure)
+- Experience with version control systems (Git) and CI/CD pipelines
+- Strong problem-solving skills and attention to detail
+- Excellent communication and collaboration abilities
+- Experience with agile development methodologies
+
+Preferred Qualifications:
+- Experience with microservices architecture
+- Knowledge of containerization (Docker, Kubernetes)
+- Experience with serverless technologies
+- Understanding of security best practices
+- Contributions to open-source projects
+- Experience with monitoring and performance optimization
+
+We Offer:
+- Competitive salary and equity package
+- Comprehensive health, dental, and vision insurance
+- 401(k) with employer match
+- Flexible working hours and remote work options
+- Professional development budget
+- Latest equipment and software
+- Casual work environment with a focus on work-life balance
+- Regular team events and company retreats
+
+TechSolutions Inc. is an equal opportunity employer committed to building a diverse and inclusive workforce. We consider all qualified applicants without regard to race, color, religion, gender, sexual orientation, gender identity, national origin, age, disability, or veteran status. 

@@ -1,0 +1,94 @@
+DAVID JOHNSON
+Full Stack Software Engineer
+
+david.johnson@example.com
+(555) 987-6543
+https://linkedin.com/in/davidjohnson
+https://github.com/davidj-dev
+
+-------------------------------
+SUMMARY
+-------------------------------
+Full-stack software engineer with 7+ years of experience building scalable web applications and cloud-based solutions. Expertise in JavaScript/TypeScript, React, Node.js, and AWS. Passionate about creating efficient, maintainable code and mentoring junior developers. Strong background in agile development and CI/CD practices.
+
+-------------------------------
+SKILLS
+-------------------------------
+Programming: JavaScript, TypeScript, Python, Java, HTML, CSS, SQL
+Frontend: React, Redux, Angular, Vue.js, SASS, Webpack, Jest
+Backend: Node.js, Express, Django, Spring Boot, GraphQL, REST APIs
+Databases: PostgreSQL, MongoDB, DynamoDB, Redis
+Cloud & DevOps: AWS (EC2, S3, Lambda, ECS), Docker, Kubernetes, Terraform
+Tools & Practices: Git, GitHub Actions, Jenkins, Agile/Scrum, Test-Driven Development
+Architecture: Microservices, Serverless, Event-Driven Design
+
+-------------------------------
+WORK EXPERIENCE
+-------------------------------
+Senior Software Engineer
+CloudTech Solutions | August 2020 - Present
+- Lead a team of 5 engineers developing a microservices-based SaaS platform serving 3,000+ customers
+- Architected and implemented a React-based frontend with modular component library, reducing development time by 30%
+- Designed and built RESTful and GraphQL APIs using Node.js and Express, processing 2M+ daily requests
+- Implemented containerized deployment with Docker and Kubernetes on AWS ECS
+- Established CI/CD pipelines using GitHub Actions, improving deployment frequency from weekly to daily
+- Optimized database queries and implemented caching strategies, reducing API response times by 60%
+- Mentored junior developers through code reviews and pair programming sessions
+
+Software Developer
+WebApps Inc. | June 2017 - July 2020
+- Developed and maintained multiple full-stack web applications using Angular and Spring Boot
+- Migrated monolithic application to a microservices architecture, improving scalability and fault tolerance
+- Implemented automated testing suite achieving 85% code coverage
+- Built real-time data visualization dashboards using D3.js and WebSockets
+- Designed and implemented OAuth 2.0 authentication flow and role-based access control
+- Collaborated with UX designers to implement responsive, accessible user interfaces
+- Participated in agile ceremonies and contributed to product roadmap discussions
+
+Junior Web Developer
+StartupTech | January 2016 - May 2017
+- Developed responsive web interfaces using HTML, CSS, and JavaScript
+- Built RESTful APIs with Node.js and Express
+- Implemented user authentication and authorization features
+- Assisted in database design and optimization
+- Contributed to open-source projects and internal libraries
+
+-------------------------------
+EDUCATION
+-------------------------------
+Bachelor of Science in Computer Science
+Tech University | 2012 - 2016
+- GPA: 3.8/4.0
+- Senior Project: Real-time Collaborative Editing Platform
+- Coursework: Data Structures, Algorithms, Database Systems, Web Development, Cloud Computing
+
+-------------------------------
+PROJECTS
+-------------------------------
+E-commerce Platform (2021)
+- Built a full-stack e-commerce application with React, Node.js, and PostgreSQL
+- Implemented payment processing, inventory management, and order fulfillment
+- Deployed on AWS with auto-scaling and load balancing
+- GitHub: github.com/davidj-dev/ecommerce-platform
+
+Real-time Chat Application (2019)
+- Developed a real-time chat application using WebSockets and React
+- Implemented features like message persistence, read receipts, and file sharing
+- Utilized Redis for pub/sub messaging and caching
+- GitHub: github.com/davidj-dev/realtime-chat
+
+-------------------------------
+CERTIFICATIONS
+-------------------------------
+- AWS Certified Solutions Architect (2022)
+- MongoDB Certified Developer (2021)
+- Docker Certified Associate (2020)
+- Certified Scrum Master (2019)
+
+-------------------------------
+OPEN SOURCE & COMMUNITY
+-------------------------------
+- Contributor to React-Query library
+- Published npm packages for React components and utilities
+- Speaker at local JavaScript meetups
+- Technical writer on Medium (2000+ followers) 

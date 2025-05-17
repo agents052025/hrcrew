@@ -1,0 +1,333 @@
+PRD: Мультиагентна система для перевірки резюме (Оновлено)
+Огляд продукту
+Повністю автоматизована мультиагентна система на базі фреймворку Crew для скринінгу резюме, аналізу відповідності кандидата вимогам вакансії та збору додаткової інформації з публічних джерел для формування комплексного звіту. Система підтримує гнучку конфігурацію LLM з можливістю вибору між OpenAI API та локальними моделями через Ollama.
+Бізнес-цілі
+
+Автоматизувати процес первинного скринінгу кандидатів
+Підвищити якість підбору завдяки комплексному аналізу даних
+Зменшити упередженість при оцінці кандидатів
+Прискорити процес рекрутингу
+Забезпечити можливість навчання системи за рахунок зворотного зв'язку
+Надати гнучкість у виборі LLM залежно від бюджету та вимог до конфіденційності
+
+Функціональні вимоги
+1. Агенти системи
+1.1. Агент обробки документів
+
+Підтримує формати PDF, DOCX, HTML, TXT
+Використовує PyMuPDF для обробки PDF файлів
+Витягує структуровану інформацію з резюме
+Нормалізує дані з різних форматів
+
+1.2. Агент аналізу резюме
+
+Класифікує досвід за категоріями
+Визначає тривалість роботи на аналогічних посадах
+Вимірює рівень володіння технологіями/навичками
+
+1.3. Агент аналізу вакансії
+
+Визначає обов'язкові та бажані вимоги
+Пріоритизує ключові навички
+Виділяє критичні показники (напр., мінімальний досвід)
+
+1.4. Агент дослідження
+
+Використовує web scraper для збору інформації
+Інтеграція з Brave Search для пошуку в інтернеті
+Збір інформації з соціальних мереж
+Аналіз активності на GitHub
+Пошук публікацій та активності на DOU.ua
+Консолідація знайденої інформації про хобі, інтереси, проєкти
+
+1.5. Агент порівняння
+
+Обчислення показників відповідності
+Особливий акцент на кількості років досвіду на аналогічній посаді
+Ранжування кандидатів за відповідністю
+
+1.6. Агент звітування
+
+Генерація структурованих звітів
+Формування рекомендацій
+Візуалізація ключових метрик
+
+1.7. Агент зворотного зв'язку
+
+Збір оцінок якості звітів від користувачів
+Покращення алгоритмів на основі отриманого зворотного зв'язку
+
+2. Конфігурація LLM
+2.1. Підтримка різних LLM провайдерів
+
+Інтеграція з OpenAI API (GPT-3.5, GPT-4)
+Інтеграція з Ollama для локальних моделей (Llama, Mistral, тощо)
+Конфігурація через файл налаштувань або інтерфейс
+
+2.2. Гнучке налаштування параметрів моделей
+
+Температура
+Max tokens
+Параметри контексту
+Налаштування швидкості/якості для різних завдань
+
+2.3. Автоматичне перемикання між моделями
+
+Fallback сценарії при недоступності обраної моделі
+Можливість використання різних моделей для різних агентів
+
+3. Детальний процес роботи
+3.1. Завантаження та парсинг документів
+
+Завантаження резюме (PDF, DOCX, HTML, TXT)
+Завантаження опису вакансії
+Структурування даних
+
+3.2. Паралельний аналіз
+
+Аналіз резюме (навички, досвід, освіта)
+Аналіз вимог вакансії
+Особливий фокус на підрахунку років релевантного досвіду
+
+3.3. Проведення пошуку додаткової інформації
+
+Пошук профілів у соцмережах (LinkedIn, Facebook, Twitter)
+Аналіз GitHub-активності (проєкти, внески, технології)
+Аналіз профілю на DOU.ua (статті, відгуки, участь у заходах)
+Збір даних про зацікавлення та хобі
+
+3.4. Порівняльний аналіз
+
+Розрахунок відповідності за ключовими метриками
+Оцінка м'яких навичок на основі зібраних даних
+Формування загального рейтингу
+
+3.5. Генерація звіту
+
+Структурований звіт відповідності
+Візуалізація сильних і слабких сторін кандидата
+Рекомендації щодо подальших кроків
+
+Технічна архітектура
+1. Архітектура Crew з конфігурацією LLM
+pythonfrom crewai import Agent, Task, Crew, Process
+from config import LLMConfig
+
+# Налаштування LLM
+llm_config = LLMConfig()
+
+# Якщо обрано OpenAI
+if llm_config.provider == "openai":
+    from langchain.llms import OpenAI
+    llm = OpenAI(
+        api_key=llm_config.api_key,
+        model_name=llm_config.model_name,
+        temperature=llm_config.temperature
+    )
+# Якщо обрано Ollama
+elif llm_config.provider == "ollama":
+    from langchain.llms import Ollama
+    llm = Ollama(
+        model=llm_config.model_name,
+        url=llm_config.server_url,
+        temperature=llm_config.temperature
+    )
+
+# Створення агентів з конфігурованим LLM
+document_processor = Agent(
+    role="Document Processor",
+    goal="Extract structured data from resumes in PDF, DOCX, HTML, TXT formats",
+    backstory="I am specialized in parsing documents and extracting key information",
+    allow_delegation=False,
+    llm=llm
+)
+
+resume_analyzer = Agent(
+    role="Resume Analyzer",
+    goal="Analyze candidate experience and skills with focus on years in similar positions",
+    backstory="I evaluate professional backgrounds and quantify experience metrics",
+    allow_delegation=True,
+    llm=llm
+)
+
+job_description_analyzer = Agent(
+    role="Job Requirements Analyzer",
+    goal="Identify key requirements and prioritize them based on importance",
+    backstory="I understand what companies really need in their candidates",
+    allow_delegation=True,
+    llm=llm
+)
+
+researcher = Agent(
+    role="Candidate Researcher",
+    goal="Find additional information about candidates online using web scraping and Brave Search",
+    backstory="I'm an expert at discovering digital footprints and relevant information",
+    allow_delegation=True,
+    llm=llm
+)
+
+matcher = Agent(
+    role="Matching Specialist",
+    goal="Calculate match scores between candidates and job requirements",
+    backstory="I create accurate algorithms to determine the best candidate fit",
+    allow_delegation=True,
+    llm=llm
+)
+
+report_generator = Agent(
+    role="Report Generator",
+    goal="Create comprehensive, readable reports on candidate suitability",
+    backstory="I transform complex data into actionable insights and recommendations",
+    allow_delegation=False,
+    llm=llm
+)
+
+feedback_collector = Agent(
+    role="Feedback Processor",
+    goal="Collect and process user feedback to improve system accuracy",
+    backstory="I help the system learn from its successes and mistakes",
+    allow_delegation=False,
+    llm=llm
+)
+
+# Створення завдань для кожного агента
+# ...
+
+# Формування команди
+resume_screening_crew = Crew(
+    agents=[document_processor, resume_analyzer, job_description_analyzer, 
+            researcher, matcher, report_generator, feedback_collector],
+    tasks=[...],
+    process=Process.sequential,  # або Process.hierarchical залежно від потреби
+    verbose=True
+)
+
+# Запуск процесу
+result = resume_screening_crew.kickoff()
+2. Компоненти системи
+2.1. Парсери документів
+
+PyMuPDF для PDF файлів
+python-docx для DOCX файлів
+BeautifulSoup для HTML
+Стандартні функції для TXT
+Spacy для NLP аналізу тексту
+
+2.2. Модуль дослідження
+
+Web scraper для збору даних з різних джерел
+Інтеграція з Brave Search для пошуку інформації
+Скрапери для соціальних мереж, GitHub та DOU.ua
+Модуль валідації та фільтрації результатів пошуку
+
+2.3. Модуль оцінювання та зберігання даних
+
+Qdrant для векторного зберігання та RAG (Retrieval Augmented Generation)
+Алгоритм зважених показників
+Система визначення релевантного досвіду
+Порівняння векторних представлень навичок
+
+2.4. Модуль конфігурації LLM
+
+Клас LLMConfig для збереження параметрів LLM
+Адаптери для різних LLM провайдерів
+Спеціалізовані prompt шаблони для різних моделей
+Метрики використання токенів та продуктивності
+
+2.5. Модуль звітування
+
+Шаблони звітів у markdown/HTML форматі
+Візуалізація даних (графіки, діаграми)
+Інтерактивні елементи для зворотного зв'язку
+
+3. Веб-інтерфейс (прототип)
+pythonimport streamlit as st
+
+st.title("Resume Screening System")
+
+# LLM Configuration section
+st.sidebar.header("LLM Configuration")
+llm_provider = st.sidebar.selectbox("Select LLM Provider", ["OpenAI", "Ollama"])
+
+if llm_provider == "OpenAI":
+    api_key = st.sidebar.text_input("OpenAI API Key", type="password")
+    model_name = st.sidebar.selectbox("Model", ["gpt-3.5-turbo", "gpt-4"])
+else:  # Ollama
+    server_url = st.sidebar.text_input("Ollama Server URL", value="http://localhost:11434")
+    model_name = st.sidebar.selectbox("Model", ["llama2", "mistral", "mixtral"])
+
+temperature = st.sidebar.slider("Temperature", 0.0, 1.0, 0.7)
+st.sidebar.button("Save Configuration")
+
+# Upload area
+resume_file = st.file_uploader("Upload Resume", type=["pdf", "docx", "html", "txt"])
+job_desc_file = st.file_uploader("Upload Job Description", type=["pdf", "docx", "html", "txt"])
+
+if st.button("Analyze") and resume_file and job_desc_file:
+    # Process files and start agent system
+    st.info(f"Analysis in progress with {llm_provider} ({model_name})...")
+    
+    # Simulation of processing
+    progress_bar = st.progress(0)
+    for i in range(100):
+        # Update progress bar
+        progress_bar.progress(i + 1)
+        
+    # Display results
+    st.success("Analysis complete!")
+    
+    # Tabs for different sections of the report
+    tab1, tab2, tab3, tab4 = st.tabs(["Match Score", "Skills Analysis", "Experience", "Online Presence"])
+    
+    with tab1:
+        st.header("Overall Match")
+        # Display overall score and recommendations
+        
+    with tab2:
+        st.header("Skills Analysis")
+        # Display skills match visualization
+        
+    with tab3:
+        st.header("Experience Assessment")
+        # Show experience metrics with focus on years in similar roles
+        
+    with tab4:
+        st.header("Online Presence & Additional Data")
+        # Show findings from social media, GitHub, DOU.ua
+
+    # Feedback section
+    st.header("Provide Feedback")
+    feedback = st.slider("Rate the accuracy of this analysis", 1, 5, 3)
+    feedback_text = st.text_area("Additional feedback")
+    if st.button("Submit Feedback"):
+        # Process feedback
+        st.toast("Thank you for your feedback!")
+4. Структура конфігураційного файлу LLM
+yaml# config.yaml
+llm:
+  provider: "openai"  # або "ollama"
+  
+  # OpenAI налаштування
+  openai:
+    api_key: "your-api-key-here"
+    model_name: "gpt-4"
+    temperature: 0.7
+    max_tokens: 2000
+    
+  # Ollama налаштування
+  ollama:
+    server_url: "http://localhost:11434"
+    model_name: "llama2"
+    temperature: 0.7
+    
+  # Налаштування для різних агентів
+  agent_specific:
+    researcher:
+      provider: "openai"  # може відрізнятися від основного
+      model_name: "gpt-4"
+      temperature: 0.5
+    
+    document_processor:
+      provider: "ollama"
+      model_name: "mistral"
+      temperature: 0.3

@@ -1,0 +1,24 @@
+crewai>=0.120.1
+crewai_tools>=0.45.0
+langchain-openai>=0.2.0
+langchain-community>=0.3.24
+langchain-core>=0.3.0
+langchain-ollama>=0.3.3
+python-dotenv>=1.0.0
+openai>=1.0.0
+
+# Document parsing
+pymupdf>=1.25.0  # For PDF parsing
+python-docx>=1.1.0  # For DOCX parsing
+beautifulsoup4>=4.13.0  # For HTML parsing
+lxml>=5.0.0  # Better XML/HTML parsing for BS4
+
+# Web interface
+streamlit==1.36.0
+protobuf==4.21.12
+pyyaml>=6.0.0
+
+# Utilities
+tqdm>=4.66.0  # For progress bars
+pytest>=7.0.0  # For testing 
+wrapt>=1.16.0 # For compatibility with Python 3.11+ 

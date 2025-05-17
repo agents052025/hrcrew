@@ -1,0 +1,6 @@
+https://claude.ai/share/237b1c0b-523b-4820-aa4e-3e0f01843720
+
+
+
+
+потрібно створити мультиагентну систему на базі @docs:https://docs.crewai.com/concepts/agents. вимоги по даному рішенню знаходяться в @prd.txt та @todo.txt 

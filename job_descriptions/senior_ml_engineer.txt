@@ -1,0 +1,56 @@
+Senior Machine Learning Engineer
+
+Company: AI Innovations Inc.
+Location: San Francisco, CA / Remote
+Type: Full-time
+
+About Us:
+AI Innovations Inc. is a leading company in the field of artificial intelligence and machine learning solutions. We develop cutting-edge AI applications for various industries, including healthcare, finance, and retail. Our mission is to make AI accessible and valuable for businesses of all sizes.
+
+Job Description:
+We are seeking an experienced Senior Machine Learning Engineer to join our growing team. The ideal candidate will lead the development and deployment of machine learning models, mentor junior team members, and collaborate with cross-functional teams to drive innovation in our AI products.
+
+Responsibilities:
+- Design, develop, and implement machine learning models and algorithms to solve complex business problems
+- Build and maintain scalable ML infrastructure and pipelines using modern cloud platforms
+- Lead the entire ML lifecycle from data preprocessing and feature engineering to model evaluation and deployment
+- Collaborate with data scientists, engineers, and product managers to turn ML prototypes into production-ready systems
+- Mentor junior engineers and data scientists, providing technical guidance and code reviews
+- Stay up-to-date with the latest research and technologies in ML/AI and identify opportunities for implementation
+- Optimize existing models to improve performance, accuracy, and efficiency
+- Document model architectures, data pipelines, and experimental results
+- Participate in technical discussions and contribute to the product roadmap
+
+Requirements:
+- Bachelor's degree in Computer Science, Engineering, Mathematics, or related field; Master's or PhD preferred
+- 5+ years of professional experience building and deploying machine learning models in production
+- Strong programming skills in Python and experience with ML libraries such as TensorFlow, PyTorch, scikit-learn
+- Experience with cloud platforms (AWS, GCP, or Azure) and containerization technologies (Docker, Kubernetes)
+- Proficiency in data processing frameworks like Apache Spark, Pandas, or Dask
+- Expertise in both supervised and unsupervised learning techniques
+- Strong understanding of database systems (SQL, NoSQL) and data warehousing
+- Experience with MLOps tools and practices for continuous integration and deployment of ML models
+- Knowledge of software engineering best practices (version control, testing, documentation)
+
+Preferred Qualifications:
+- Experience with deep learning frameworks and techniques
+- Background in natural language processing, computer vision, or reinforcement learning
+- Familiarity with distributed computing and big data technologies
+- Contributions to open-source ML/AI projects or research publications
+- Experience with data labeling tools and techniques
+- Knowledge of model interpretability and explainability methods
+- Experience with real-time inference systems
+
+Benefits and Perks:
+- Competitive salary and equity options
+- Health, dental, and vision insurance
+- 401(k) with company match
+- Flexible work schedule and remote work options
+- Continuous learning budget for conferences and courses
+- Modern equipment and software
+- Collaborative and innovative work environment
+
+AI Innovations Inc. is an equal opportunity employer. We celebrate diversity and are committed to creating an inclusive environment for all employees.
+
+To Apply:
+Please submit your resume, a brief cover letter, and links to relevant projects or GitHub profiles. 
