@@ -1,0 +1,16 @@
+# OpenAI Configuration
+OPENAI_API_KEY=your_key
+BRAVE_API_KEY=your_key
+
+
+# Optional: Ollama Configuration (if using local models)
+OLLAMA_BASE_URL=http://localhost:11434
+OLLAMA_MODEL_NAME=mistral
+
+# Application Settings
+VERBOSE_MODE=true
+ALLOW_DELEGATION=true
+
+
+# Optional: Serper.dev API key for web search
+SERPER_API_KEY=your-serper-api-key-here
