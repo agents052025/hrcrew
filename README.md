@@ -106,7 +106,7 @@ llm:
 
 1. Запустіть Streamlit:
    ```bash
-   streamlit run app.py
+   python -m streamlit run app.py
    ```
 2. Відкрийте браузер: http://localhost:8501
 3. Налаштуйте LLM у сайдбарі
