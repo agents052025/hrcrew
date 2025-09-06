@@ -15,7 +15,7 @@ lxml>=5.0.0  # Better XML/HTML parsing for BS4
 
 # Web interface
 streamlit==1.36.0
-protobuf==4.21.12
+protobuf==4.25.8
 pyyaml>=6.0.0
 
 # Utilities
